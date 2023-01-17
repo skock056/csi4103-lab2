@@ -1,4 +1,10 @@
 # csi4103-lab2
+Sebastien Kock, 300137051
+January 17th, 2023
+
+## Exercise 0.4
+
+Below is the Mermaid Sequence Diagram representing the operations when adding a new note to the multi-page version of the website https://studies.cs.helsinki.fi/exampleapp/notes.
 
 ```mermaid
 sequenceDiagram
@@ -6,9 +12,6 @@ sequenceDiagram
     participant Server
     
     Client->>Server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-    activate Server
-    Server-->>Client: Reload the page with new note
-    deactivate Server
 
     Client->>Server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate Server
@@ -39,3 +42,4 @@ sequenceDiagram
     Server-->>Client: the .ico file
     deactivate Server
 ```
+
