@@ -7,7 +7,7 @@ sequenceDiagram
     
     Client->>Server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate Server
-    Server-->>Client: The notes.html document with the newly added value
+    Server-->>Client: Reload the page with new note
     deactivate Server
 
     Client->>Server: GET https://studies.cs.helsinki.fi/exampleapp/notes
