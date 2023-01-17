@@ -2,30 +2,40 @@
 
 ```mermaid
 sequenceDiagram
-    participant browser
-    participant server
+    participant Client
+    participant Server
     
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
-    activate server
-    server-->>browser: HTML document
-    deactivate server
-    
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
-    activate server
-    server-->>browser: the css file
-    deactivate server
-    
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
-    activate server
-    server-->>browser: the JavaScript file
-    deactivate server
-    
-    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
-    
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
-    activate server
-    server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
-    deactivate server    
+    Client->>Server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    activate Server
+    Server-->>Client: The notes.html document with the newly added value
+    deactivate Server
 
-    Note right of browser: The browser executes the callback function that renders the notes 
+    Client->>Server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    activate Server
+    Server-->>Client: HTML document
+    deactivate Server
+    
+    Client->>Server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    activate Server
+    Server-->>Client: the css file
+    deactivate Server
+    
+    Client->>Server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    activate Server
+    Server-->>Client: the JavaScript file
+    deactivate Server
+    
+    Note right of Client: The Client starts executing the JavaScript code that fetches the JSON from the Server
+    
+    Client->>Server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    activate Server
+    Server-->>Client: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
+    deactivate Server    
+
+    Note right of Client: The Client executes the callback function that renders the notes 
+
+    Client->>Server: GET https://studies.cs.helsinki.fi/favicon.ico
+    activate Server
+    Server-->>Client: the .ico file
+    deactivate Server
 ```
