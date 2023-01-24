@@ -1,5 +1,3 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
 // EXERCISE 1.1
 import React from 'react'
 import ReactDOM from 'react-dom/client'
