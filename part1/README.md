@@ -1,3 +1,7 @@
+# CSI 4103 Lab 2
+# Sebastien Kock
+# 300137051
+<br><br>
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
